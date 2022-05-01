@@ -1,18 +1,10 @@
-.container {
-    background-color: aqua;
+.board {
     height: 500px;
     width: 500px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
+    display: grid;
 }
 
 .box {
-    font-size: 2rem;
     border: 5px;
-    border-color: black;
     border-style: solid;
-    height: 115px;
-    width: 115px;
-    text-align: center;
 }
