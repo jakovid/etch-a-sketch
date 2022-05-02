@@ -2,12 +2,10 @@
     height: 500px;
     width: 500px;
     display: grid;
-}
-
-.box {
     border: 5px;
     border-style: solid;
 }
+
 
 .box:hover {
     background-color: black;

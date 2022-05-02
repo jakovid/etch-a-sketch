@@ -1,5 +1,5 @@
 /* variables */
-
+let color = "black";
 
 /* event listeners */
 
@@ -15,12 +15,15 @@ function makeBoard(size) {
     for (i = 0; i < size*size; i++) {
         let box = document.createElement("div");
         box.className = 'box';
-        box.innerHTML = `${i+1}`;
         box.addEventListener("mouseover", () => {
-            box.style.backgroundColor = "black";
+            box.style.backgroundColor = `${color}`;
         });
         document.getElementById('board').appendChild(box);
     }
+}
+
+function changeColor(color) {
+    let color = `${color}`;
 }
 
 function setBoard(size) {
@@ -30,3 +33,8 @@ function setBoard(size) {
         console.log("size must be between 2 and 100");
     }
 };
+
+function reset() {
+    let boxes = document.querySelectorAll(".box");
+    boxes.style.backgroundColor = "white";
+}
