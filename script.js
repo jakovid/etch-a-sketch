@@ -8,9 +8,9 @@
 /* functions */
 
 function setBoard(size) {
-    let board = document.querySelector('.board');
-    let boxes = document.querySelectorAll('div');
-    /* this doesnt workkkk boxes.forEach((div) --> div.remove()); */
+    let board = document.querySelector(".board");
+    let boxes = document.querySelectorAll(".box");
+    boxes.forEach((div) => div.remove());
     board.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     for (i = 0; i < size*size; i++) {
         let box = document.createElement("div");
