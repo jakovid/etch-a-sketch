@@ -8,3 +8,7 @@
     border: 5px;
     border-style: solid;
 }
+
+.box:hover {
+    background-color: black;
+}
