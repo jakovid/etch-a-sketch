@@ -27,7 +27,7 @@ function setBoard(size) {
     if(size >= 2 && size <= 100) {
         makeBoard(size);
     } else {
-        console.log("size must be between 2 and 100");
+        alert("size must be between 2 and 100");
     }
 };
 

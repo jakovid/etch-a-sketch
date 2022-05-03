@@ -10,3 +10,28 @@
 .box:hover {
     background-color: black;
 }
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.footer {
+    text-align: center;
+    font-size: 0.75rem;
+    padding-top: 1rem;
+}
