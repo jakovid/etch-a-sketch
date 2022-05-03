@@ -1,8 +1,10 @@
 /* variables */
 let color = "black";
+let down = false;
 
 /* event listeners */
-
+board.onmousedown = mouseDown;
+board.onmouseup = mouseUp;
 
 /* functions */
 
@@ -37,9 +39,21 @@ function reset() {
 }
 
 function colorBox(){
-    if(color == 'random') {
-        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+    if(down == true) {
+        if(color == 'random') {
+            this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+        } else {
+            this.style.backgroundColor = color;
+        }
     } else {
-        this.style.backgroundColor = color;
+        
     }
+}
+
+function mouseDown() {
+    down = true;
+}
+
+function mouseUp() {
+    down = false;
 }
