@@ -8,21 +8,21 @@
     <title>Sketchpad</title>
 </head>
 <body>
-    <div class="flex-container">
+    <div class="flexContainer">
         <div class="title">
             <h1>Sketchpad</h1>
         </div>
         <div class="content">
             <div class="board" id="board"></div>
-            <div class="buttons">
+            <div class="controls">
                 <button id="blackButton" onclick="changeColor('black')">Black</button>
-                <button id="whiteButton" onclick="changeColor('white')">White</button>
+                <button id="whiteButton" onclick="changeColor('white')">Eraser</button>
                 <button id="randomButton" onclick="changeColor('random')">Random</button>
                 <button onclick="reset()">Reset</button>
-            </div>
-            <div>
-                <input type="text" name="size" id="size" placeholder="Size of Board" value="16" />
-                <button onclick="setBoard(document.getElementById('size').value)">Set Size</button>
+                <div class="boardInput">
+                    <input type="range" min="2" max="100" name="size" id="size" value="16" />
+                    <button onclick="setBoard(document.getElementById('size').value)">Set Size</button>
+                </div>
             </div>
         </div>
     </div>
