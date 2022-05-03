@@ -3,8 +3,8 @@ let color = "black";
 let down = false;
 
 /* event listeners */
-board.onmousedown = mouseDown;
-board.onmouseup = mouseUp;
+
+// board.click = colorBox;
 
 /* functions */
 
@@ -16,7 +16,9 @@ function makeBoard(size) {
     for (i = 0; i < size*size; i++) {
         let box = document.createElement("div");
         box.className = 'box';
-        box.addEventListener("mouseover", colorBox);
+        box.addEventListener("mousedown", colorBox);
+        box.addEventListener("click", colorBox)
+        box.addEventListener("mouseover", colorBox)
         document.getElementById('board').appendChild(box);
     }
 }
@@ -38,22 +40,23 @@ function reset() {
     boxes.forEach((div) => div.style.backgroundColor = 'white');
 }
 
-function colorBox(){
-    if(down == true) {
+function colorBox(event){
+    console.log('colorBox down:', down, event.type);
+
+    if (event.type === "click"){
+        down = !down;
+    }
+
+    if (event.type === "mouseup") {
+        down = false;
+    } 
+
+    if (down) {
         if(color == 'random') {
             this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
         } else {
             this.style.backgroundColor = color;
         }
-    } else {
-
     }
 }
 
-function mouseDown() {
-    down = true;
-}
-
-function mouseUp() {
-    down = false;
-}
