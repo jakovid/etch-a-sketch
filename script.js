@@ -47,10 +47,6 @@ function colorBox(event){
         down = !down;
     }
 
-    if (event.type === "mouseup") {
-        down = false;
-    } 
-
     if (down) {
         if(color == 'random') {
             this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
