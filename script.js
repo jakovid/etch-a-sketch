@@ -33,7 +33,7 @@ function setBoard(size) {
 
 function reset() {
     let boxes = document.querySelectorAll(".box");
-    boxes.forEach((div) => div.remove());
+    boxes.forEach((div) => div.style.backgroundColor = 'white');
 }
 
 function colorBox(){
