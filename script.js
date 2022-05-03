@@ -46,7 +46,7 @@ function colorBox(){
             this.style.backgroundColor = color;
         }
     } else {
-        
+
     }
 }
 
